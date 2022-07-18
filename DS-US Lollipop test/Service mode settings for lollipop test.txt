@@ -1,0 +1,11 @@
+The wobalgo settings used are (you don’t need to run wobalgo at all):
+
+·  Irradiation file is called R20M0.csv
+
+·  Range at nozzle: 20.33 cm
+
+·  Current at cyclo exit: 7 nA (for all lollipops out)
+                          20 nA (for all lollipops in)	
+
+·  Beam Line option: 0
+
