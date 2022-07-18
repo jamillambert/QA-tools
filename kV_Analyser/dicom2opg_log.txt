@@ -1,0 +1,8 @@
+Processing Dicom file 'Measurements\Measurement_20220524 orthog new.dcm'
+   IMAGE: : width:600 height:600 imagePosY:-149.75 imagePosY:-149.75 pixelSpacingX:0.5 pixelSpacingY:0.5
+---------------- Frame 0 has non-black pixels, above threshold -2147483647
+Saving results to 'Measurements\Measurement_20220524 orthog new_000.opg'
+Processing Dicom file 'Measurements\Measurement_20220524.dcm'
+   IMAGE: : width:600 height:600 imagePosY:-149.75 imagePosY:-149.75 pixelSpacingX:0.5 pixelSpacingY:0.5
+---------------- Frame 0 has non-black pixels, above threshold -2147483647
+Saving results to 'Measurements\Measurement_20220524_000.opg'
