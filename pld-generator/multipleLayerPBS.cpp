@@ -1,8 +1,7 @@
 //============================================================================
 // Program name : multipleLayerPBS.cpp
-// Authors      : Jamil Lambert, Dagmar Schönenberg 2013
+// Authors      : Jamil Lambert, Dagmar Schï¿½nenberg 2013
 // Version      : 2.1
-// Copyright    : WPE
 // Description  : writes a *.pld file for a multiple layer PBS beam
 //============================================================================
 
@@ -66,7 +65,7 @@ static bool setVariables(istream& sourceStream) {
 		sourceStream.clear();
 		sourceStream >> enteredVal;
  	}
- 	
+
 	if (disp) cout << "\nEnter max Range (0-320mm) (Enter d for default, s to skip): ";
 	sourceStream >> enteredNum;
 	if(!sourceStream){
@@ -80,14 +79,14 @@ static bool setVariables(istream& sourceStream) {
         else {
              cout << "\nRange set to default: 200mm \n";
              range = 200.0;
-        }     
+        }
 	}
 	else if(enteredNum <= 0 || enteredNum > 320) {
 		cout << "\nRange " << enteredNum << "mm outside limits, set to default: 200mm \n";
 		range = 200.0;
     }
     else range = enteredNum;
-    
+
 	if (disp) cout << "\nEnter Field size in x (max 300mm): ";
 	sourceStream >> enteredNum;
 	if(!sourceStream){
@@ -98,7 +97,7 @@ static bool setVariables(istream& sourceStream) {
         else {
              cout << "\nField size in x set to default: 100mm \n";
              fieldSizeX = 100.0;
-        }     
+        }
 	}
 	else if(enteredNum < 0 || enteredNum > 300) {
 		cout << "\nField Size X " << enteredNum << "mm outside limits, set to default: 100mm \n";
@@ -116,7 +115,7 @@ static bool setVariables(istream& sourceStream) {
         else {
              cout << "\nField size in y set to default: 100mm\n";
              fieldSizeY = 100.0;
-        }     
+        }
 	}
 	else if(enteredNum < 0 || enteredNum > 400) {
 		cout << "\nField Size Y " << enteredNum << "mm outside limits, set to default: 100mm\n";
@@ -134,7 +133,7 @@ static bool setVariables(istream& sourceStream) {
              cout << "Modulation not changed: " << modWidth << "mm\n";
         else {
 		     cout << "\nModulation set to: " << modWidth << "mm\n";
-        }     
+        }
 	}
 	else if(enteredNum > range || enteredNum < 0) {
          if (range < 100) modWidth = range;
@@ -142,7 +141,7 @@ static bool setVariables(istream& sourceStream) {
          cout << "\nModulation " << enteredNum << "mm outside limits, set to default: " << modWidth <<"mm\n";
     }
     else modWidth = enteredNum;
-    
+
 	if (disp) cout << "\nEnter spot spacing (1-50mm): ";
 	sourceStream >> enteredNum;
 	if(!sourceStream){
@@ -152,14 +151,14 @@ static bool setVariables(istream& sourceStream) {
              cout << "Spot spacing not changed: " << spotSpacing << "mm\n";
         else {
 		     cout << "\nSpot spacing set to: " << spotSpacing << "mm\n";
-        }     
+        }
 	}
 	else if(enteredNum > 50 || enteredNum < 1) {
          cout << "\nSpot spacing " << enteredNum << "mm outside limits, set to default: 10mm\n";
          spotSpacing = 10;
     }
     else spotSpacing = enteredNum;
-    
+
 	if (disp) cout << "\nEnter layer spacing (1-50mm): ";
 	sourceStream >> enteredNum;
 	if(!sourceStream){
@@ -169,14 +168,14 @@ static bool setVariables(istream& sourceStream) {
              cout << "Layer spacing not changed: " << layerSpacing << "mm\n";
         else {
 		     cout << "\nLayer spacing set to: " << layerSpacing << "mm\n";
-        }     
+        }
 	}
 	else if(enteredNum > 50 || enteredNum < 1) {
          cout << "\nLayer spacing " << enteredNum << "mm outside limits, set to default: 10mm\n";
          layerSpacing = 10;
     }
     else layerSpacing = enteredNum;
-    
+
 	if (modWidth == 0)
 		noLayers = 1;
 	else
@@ -186,7 +185,7 @@ static bool setVariables(istream& sourceStream) {
 	noSpotsX = (int)(fieldSizeX / spotSpacing)+1;
 	noSpotsY = (int)(fieldSizeY / spotSpacing)+1;
 	noSpots = noLayers * noSpotsX * noSpotsY;
-	
+
 	if (disp) cout << "\nEnter total number of MU: " ;
 	sourceStream >> enteredNum;
 	if(!sourceStream){
@@ -197,14 +196,14 @@ static bool setVariables(istream& sourceStream) {
         else {
              totalMU = noSpots;
 		     cout << "\nTotal MU set to default: 1MU/spot = " << totalMU << " MU\n";
-        }     
+        }
 	}
 	else if(enteredNum/noSpots > 12 || enteredNum < noSpots*0.01) {
          totalMU = noSpots;
          cout << "\nEntered MU " << enteredNum << "MU outside limits, set to default 1MU per spot = " << totalMU << " MU\n";
     }
     else totalMU = enteredNum;
-    
+
 	if (disp) cout << "\nEnter number of paintings (default 1): ";
 	sourceStream >> noPaintings;
 	if(!sourceStream || noPaintings < 1 || noPaintings > 50) {
