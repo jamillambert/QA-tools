@@ -1,6 +1,6 @@
 //============================================================================
 // Name        : multipleLayerPBS.cpp
-// Author      : D. Schönenberg, J. Lambert 2011
+// Author      : D. Schoenenberg, J. Lambert 2011
 // Version     : 2.0
 // Copyright   :
 // Description : writes a *.pld file for a multiple layer PBS beam
@@ -10,11 +10,11 @@
 
 * The program can be run without any arguments and the variables entered at runtime.
 
-OR 
+OR
 
 usage for a single layer:
 
-multipleLayerPBS.exe <Range (g/cm²)> <FieldSizeX (mm)> <FieldSizeY (mm)> <SpotSpacing (mm)>  <total MU>
+multipleLayerPBS.exe <Range (g/cmï¿½)> <FieldSizeX (mm)> <FieldSizeY (mm)> <SpotSpacing (mm)>  <total MU>
 
 Note CB: <total MU> is really the number of MU of all spots.
 
@@ -30,7 +30,7 @@ multipleLayerPBS -n < input
 
 "setVariables" - sets the variables manually, must be followed by a list of 8 numbers for the settings in this order:
 		<range> <field size in x> <field size in y> <SOBP width> <spot spacing> <layer spacing> <number of MUs> <number of paintings>
-		
+
 "readWeights" <weight file name> - reads in layer weights from the specified file, weights file is a list of numbers with a . decimal seperator, the weights are for the highest energy layer to the lowest, the file must have at least as many weights as the number of layers with no other characters in the file except the weight numbers, but it can have more weights than the number used.
 
 "writeFile" - writes the specified field to a pld file which is automatically named as "PBSfield_<max energy>_<x size>x<y size>x<SOBP width>_<number of MUs>.pld and overwrites any existing pld file with the same name.
