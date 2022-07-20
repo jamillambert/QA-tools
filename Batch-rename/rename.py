@@ -1,4 +1,4 @@
-#Python script to batch rename with a number appended for all files in a directory with the specified extension
+# Python script to batch rename with a number appended for all files in a directory with the specified extension
 # Jamil Lambert 2020
 #
 # usage:
