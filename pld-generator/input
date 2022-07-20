@@ -1,0 +1,13 @@
+setVariables
+200
+100
+100
+100
+7
+10
+1000
+1
+readWeights
+weights.txt
+writeFile
+exit
