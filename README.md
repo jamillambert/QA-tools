@@ -1,1 +1,1 @@
-Tools for routine proton therapy QA, mostly writting in Python and Matlab.  Individual tools have their own readme
+Tools for routine proton therapy QA, mostly writting in Python and Matlab.  Individual tools have their own readme.  These tools were written for use at the Rutherford Cancer Centres and must be modified appropriately and checked before use at a different centre.
