@@ -25,7 +25,7 @@ try:
     historyFile = '.\\bin\\history.npy' # History stored in this file
     tempList = np.load(historyFile)
     kVhistory = tempList.tolist()
-except:
+except FileNotFoundError:
     kVhistory = ['{:<22} {:^40} {:^11} {:^11} {:^11} {:^11} {:^11} {:^11} {:>11} {:>11} {:>11} {:>11}'.format('Analysis Date', 'file', 'source', 'BL', 'BR', 'TL', 'TR', 'CTR', 'Dose diff', 'whole mean', 'left mean', 'right mean')]
 
 try:    
@@ -41,7 +41,7 @@ try:
     c8 = int(baselines[8]) #End x for left range
     c9 = int(baselines[9]) #Start x for right range
     c10 = int(baselines[10]) #End x for right range
-except:
+except ValueError:
     print('Baseline file: ' + baselineValueFile + ' could not be loaded.  Script exiting')
     exit(1)
 fileList = [f for f in os.listdir(path) if f.endswith(".opg")]
