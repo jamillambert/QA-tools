@@ -260,7 +260,7 @@ def main():
     
     -d as an argument sets debug to true.  Debugging data is then printed to the terminal at runtime"""
     path = '.\\Measurements\\'  # Directory with opg files in it
-    # Baseline values stored in this file (NP10 = 67053, NE22 = 68212, RG2 = 68246, NE22 loan ID = 19260936)
+    # Baseline values stored in this file (NP10 = SN67053, NE22 = SN68212, RG2 = SN68246, NE22 loan ID = ID19260936)
     baseline_value_file = '.\\bin\\baseline_SN68246.npy'
     history_file = '.\\bin\\history.npy'  # History stored in this file
     debug = False
