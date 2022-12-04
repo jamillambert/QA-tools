@@ -16,7 +16,7 @@ import numpy as np
 
 
 class XrayImage:
-    """Holds a single xray image data"""
+    """Holds a single xray image pixel data, analysis functions and results"""
     def __init__(self, file_path):
         self.right_mean = 0
         self.left_mean = 0
