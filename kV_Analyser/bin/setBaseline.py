@@ -12,7 +12,8 @@ c6 = 262 #Right oblique average pixel value in right range
 c7 = 1 #Start x for left range
 c8 = 80 #End x for left range
 c9 = 500 #Start x for right range
-c10 = 600 #End x for right range
+c10 = 600  # End x for right range
+c11 = 10  # Dose tolerance in percent
 
 
 baselineValueFile = r'baseline.npy'
